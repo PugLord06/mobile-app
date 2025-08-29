@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Colors -->
+    <color name="primary">#1976D2</color>
+    <color name="primary_dark">#1565C0</color>
+    <color name="primary_light">#42A5F5</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent">#FF6E40</color>
+    <color name="accent_dark">#FF5722</color>
+    <color name="accent_light">#FF8A65</color>
+    
+    <!-- Background Colors -->
+    <color name="background">#F5F5F5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="error">#D32F2F</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_on_primary">#FFFFFF</color>
+    
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FFC107</color>
+    <color name="info">#2196F3</color>
+    
+    <!-- Grade Colors -->
+    <color name="grade_a">#4CAF50</color>
+    <color name="grade_b">#8BC34A</color>
+    <color name="grade_c">#FFC107</color>
+    <color name="grade_d">#FF9800</color>
+    <color name="grade_f">#F44336</color>
+    
+    <!-- Additional Colors -->
+    <color name="divider">#E0E0E0</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="shimmer">#E0E0E0</color>
+    
+    <!-- Transparent Colors -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent">#80000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+</resources>
