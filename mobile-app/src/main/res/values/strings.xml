@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eduvos Project (EDUV4895277)</string>
+    <string name="author">Student number EDUV4895277</string>
+    <string name="deliverable2">Deliverable 2</string>
+    <string name="deliverable3">Deliverable 3</string>
+    <string name="deliverable4">Deliverable 4</string>
+    <string name="deliverable5">Deliverable 5</string>
+    <string name="about">About</string>
+    <string name="welcome">Welcome! Choose a section to open.</string>
+    <string name="welcome_name">Welcome, %1$s!</string>
+    <string name="registration">Registration</string>
+    <string name="enter_name">Enter your name</string>
+    <string name="continue_txt">Continue</string>
+    <string name="memories">Memories</string>
+    <string name="gallery">Gallery</string>
+    <string name="budget">Budget</string>
+    <string name="total_colon_zero">Total: 0</string>
+    <string name="add_item">Add item</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="enter_notes">Enter Notes</string>
+    <string name="enter_custom_expenses">Enter Custom Expenses</string>
+    <string name="enter_meals_expense">Enter Meals Expense</string>
+    <string name="save_trip">Save Trip</string>
+    <string name="confirm_trip">Confirm Trip</string>
+    <string name="subtotal_colon_zero">Subtotal: 0</string>
+    <string name="budget_summary">Budget Summary</string>
+    <string name="subtotal_fmt">Subtotal: %1$s</string>
+    <string name="discount_fmt">Discount: %1$s</string>
+    <string name="final_total_fmt">Final Budget: %1$s</string>
+</resources> 
