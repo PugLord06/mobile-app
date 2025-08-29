@@ -8,6 +8,7 @@
     <module>core</module>
     <module>cli-app</module>
     <module>swing-app</module>
+    <module>android-app</module>
   </modules>
   <properties>
     <maven.compiler.source>21</maven.compiler.source>

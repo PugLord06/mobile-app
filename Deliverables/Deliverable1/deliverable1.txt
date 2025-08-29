@@ -21,3 +21,8 @@ How to import into Android Studio:
 - File > New > Project from Existing Sources...
 - Select /workspace/app-parent (it will detect Maven modules)
 - Let IDE index; you can run from Maven goals or IDE run configs.
+
+Android module added:
+- Module: android-app (Maven, android-maven-plugin)
+- Minimal MainActivity shows greeting using core GreetingService
+- Build in Android Studio with device/emulator. Maven build requires Android SDK.

@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.eduvos.initial</groupId>
+    <artifactId>app-parent</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <artifactId>android-app</artifactId>
+  <packaging>apk</packaging>
+
+  <name>Eduvos Android App</name>
+
+  <properties>
+    <android.sdk.platform>33</android.sdk.platform>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.google.android</groupId>
+      <artifactId>android</artifactId>
+      <version>4.1.1.4</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.eduvos.initial</groupId>
+      <artifactId>core</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.simpligility.maven.plugins</groupId>
+        <artifactId>android-maven-plugin</artifactId>
+        <version>4.6.0</version>
+        <configuration>
+          <sdk>
+            <platform>${android.sdk.platform}</platform>
+          </sdk>
+          <extractDuplicates>true</extractDuplicates>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
