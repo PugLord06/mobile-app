@@ -1,0 +1,28 @@
+Eduvos Initial Project - Deliverable 1
+
+Tech stack: Java 21, Maven multi-module (parent + core + CLI + Swing).
+
+Structure:
+- app-parent (Maven parent, modules: core, cli-app, swing-app)
+- core: reusable logic with GreetingService
+- cli-app: console app; fat jar with Main
+- swing-app: desktop GUI; fat jar with SwingMain
+
+Build:
+- Maven POMs are provided for Android Studio import (Maven project).
+- Executables were packaged via JDK tools (javac/jar) due to network limits.
+
+How to run executables:
+- Deliverable2: run-cli.sh (or run-cli.bat)
+- Deliverable3: run-swing.sh (or run-swing.bat)
+- Deliverable4 & 5: both CLI and Swing included
+
+How to import into Android Studio:
+- File > New > Project from Existing Sources...
+- Select /workspace/app-parent (it will detect Maven modules)
+- Let IDE index; you can run from Maven goals or IDE run configs.
+
+Android module added:
+- Module: android-app (Maven, android-maven-plugin)
+- Minimal MainActivity shows greeting using core GreetingService
+- Build in Android Studio with device/emulator. Maven build requires Android SDK.
