@@ -59,6 +59,7 @@
     <string name="empty_gallery">No memories yet. Create your first memory!</string>
     <string name="simulate_upload">Simulate Upload</string>
     <string name="play_music">Play Music</string>
+    <string name="pause_music">Pause Music</string>
     <string name="close">Close</string>
     
     <!-- Settings -->

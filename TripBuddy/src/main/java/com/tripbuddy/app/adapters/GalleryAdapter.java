@@ -47,25 +47,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
         holder.tvLocation.setText(memory.getLocation());
         holder.tvDate.setText(memory.getDate());
         
-        // Set placeholder image based on image path
-        // In real app, would load actual images
-        switch (memory.getImagePath()) {
-            case "beach":
-                holder.ivThumbnail.setImageResource(android.R.drawable.ic_menu_mapmode);
-                break;
-            case "mountain":
-                holder.ivThumbnail.setImageResource(android.R.drawable.ic_menu_compass);
-                break;
-            case "city":
-                holder.ivThumbnail.setImageResource(android.R.drawable.ic_menu_myplaces);
-                break;
-            case "forest":
-                holder.ivThumbnail.setImageResource(android.R.drawable.ic_menu_gallery);
-                break;
-            default:
-                holder.ivThumbnail.setImageResource(android.R.drawable.ic_menu_camera);
-                break;
-        }
+        // Set thumbnail image from local drawables based on key
+        holder.ivThumbnail.setImageResource(getDrawableForKey(memory.getImagePath()));
 
         // Set click listener
         holder.cardView.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +75,24 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.GalleryV
     @Override
     public int getItemCount() {
         return memories.size();
+    }
+
+    private int getDrawableForKey(String key) {
+        if (key == null) return R.drawable.adventure;
+        switch (key) {
+            case "beach":
+                return R.drawable.beach;
+            case "mountain":
+                return R.drawable.mountain;
+            case "city":
+                return R.drawable.city;
+            case "forest":
+                return R.drawable.forest;
+            case "adventure":
+                return R.drawable.adventure;
+            default:
+                return R.drawable.adventure;
+        }
     }
 
     static class GalleryViewHolder extends RecyclerView.ViewHolder {
