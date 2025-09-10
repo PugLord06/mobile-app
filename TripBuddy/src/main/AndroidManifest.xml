@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/adventure"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.TripBuddy"
+        android:supportsRtl="true">
+
+        <!-- Splash Activity -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/Theme.TripBuddy.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Login Activity -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:theme="@style/Theme.TripBuddy.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Main Activity (Dashboard) -->
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name" />
+
+        <!-- Trip Planning Activity -->
+        <activity
+            android:name=".activities.TripPlanningActivity"
+            android:label="Plan Your Trip"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <!-- Memory Activity -->
+        <activity
+            android:name=".activities.MemoryActivity"
+            android:label="Create Memory"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <!-- Gallery Activity -->
+        <activity
+            android:name=".activities.GalleryActivity"
+            android:label="Gallery"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <!-- Budget Summary Activity -->
+        <activity
+            android:name=".activities.BudgetSummaryActivity"
+            android:label="Budget Summary"
+            android:parentActivityName=".activities.TripPlanningActivity" />
+
+        <!-- Settings Activity -->
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".activities.MainActivity" />
+
+        <!-- Full Screen Image Activity -->
+        <activity
+            android:name=".activities.FullScreenImageActivity"
+            android:theme="@style/Theme.TripBuddy.FullScreen" />
+
+    </application>
+
+</manifest>

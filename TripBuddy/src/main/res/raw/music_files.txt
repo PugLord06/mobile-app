@@ -1,0 +1,13 @@
+IMPORTANT: Add music files to res/raw/ directory:
+
+1. relax.mp3 - Relaxing background music
+2. upbeat.mp3 - Upbeat/energetic music
+3. ambient.mp3 - Ambient travel music
+
+These files should be:
+- MP3 format
+- 1-2 minutes duration
+- Under 2MB each
+- Royalty-free or created for demo purposes
+
+You can use any royalty-free music or generate simple tones for demo purposes.
