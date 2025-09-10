@@ -15,6 +15,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <android.plugin.version>4.6.0</android.plugin.version>
     <android.platform>33</android.platform>
+    <android.buildTools.version>33.0.2</android.buildTools.version>
   </properties>
 
   <repositories>
@@ -24,7 +25,18 @@
     </repository>
   </repositories>
 
+  <dependencies>
+    <!-- Android SDK -->
+    <dependency>
+      <groupId>com.google.android</groupId>
+      <artifactId>android</artifactId>
+      <version>4.1.1.4</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
   <build>
+    <sourceDirectory>src/main/java</sourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -42,11 +54,58 @@
         <configuration>
           <sdk>
             <platform>${android.platform}</platform>
+            <buildTools>${android.buildTools.version}</buildTools>
           </sdk>
+          <androidManifestFile>${project.basedir}/src/main/AndroidManifest.xml</androidManifestFile>
+          <assetsDirectory>${project.basedir}/src/main/assets</assetsDirectory>
+          <resourceDirectory>${project.basedir}/src/main/res</resourceDirectory>
+          <nativeLibrariesDirectory>${project.basedir}/src/main/jniLibs</nativeLibrariesDirectory>
           <undeployBeforeDeploy>true</undeployBeforeDeploy>
+          <proguard>
+            <skip>true</skip>
+          </proguard>
+          <sign>
+            <debug>true</debug>
+          </sign>
+          <zipalign>
+            <skip>false</skip>
+          </zipalign>
+          <apkDebug>true</apkDebug>
         </configuration>
         <extensions>true</extensions>
       </plugin>
     </plugins>
   </build>
+  
+  <profiles>
+    <!-- Profile for release builds -->
+    <profile>
+      <id>release</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>com.simpligility.maven.plugins</groupId>
+            <artifactId>android-maven-plugin</artifactId>
+            <configuration>
+              <apkDebug>false</apkDebug>
+              <sign>
+                <debug>false</debug>
+                <storeFile>${project.basedir}/keystore.jks</storeFile>
+                <storePass>your-store-password</storePass>
+                <keyAlias>your-key-alias</keyAlias>
+                <keyPass>your-key-password</keyPass>
+              </sign>
+              <zipalign>
+                <skip>false</skip>
+              </zipalign>
+              <proguard>
+                <skip>false</skip>
+                <config>proguard.cfg</config>
+              </proguard>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project> 
