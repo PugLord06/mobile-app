@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="za.ac.eduvos.eduv4895277">
 
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="33"/>
 
-    <application android:allowBackup="true" android:label="@string/app_name" android:supportsRtl="true">
+    <application android:allowBackup="true" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme">
         <activity android:name=".AboutActivity"/>
-        <activity android:name=".Deliverable2Activity"/>
-        <activity android:name=".Deliverable3Activity"/>
-        <activity android:name=".Deliverable4Activity"/>
-        <activity android:name=".Deliverable5Activity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MemoriesActivity"/>
+        <activity android:name=".GalleryActivity"/>
+        <activity android:name=".BudgetActivity"/>
+        <activity android:name=".RegistrationActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".BudgetSummaryActivity"/>
+        <activity android:name=".PhotoViewerActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

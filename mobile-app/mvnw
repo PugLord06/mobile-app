@@ -77,7 +77,7 @@ case "`uname`" in
     ;;
 esac
 
-CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher
+CLASSWORLDS_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 
 # Determine the Java command to use to start the JVM.
 if [ -n "$JAVA_HOME" ] ; then
@@ -169,6 +169,7 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
 fi
 
 # Split up the JVM_OPTS And MAVEN_OPTS values into an array, following the shell quoting and substitution rules
-eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $MAVEN_OPTS -classpath "./.mvn/wrapper/maven-wrapper.jar" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" "$CLASSWORLDS_LAUNCHER" "$@"
+MAVEN_PROJECTBASEDIR="$APP_HOME"
+eval set -- $DEFAULT_JVM_OPTS $JAVA_OPTS $MAVEN_OPTS -classpath "$APP_HOME/.mvn/wrapper/maven-wrapper.jar" "-Dmaven.multiModuleProjectDirectory=${MAVEN_PROJECTBASEDIR}" "$CLASSWORLDS_LAUNCHER" "$@"
 
 exec "$JAVACMD" "$@"

@@ -33,30 +33,6 @@
       <version>4.1.1.4</version>
       <scope>provided</scope>
     </dependency>
-    
-    <!-- AndroidX AppCompat -->
-    <dependency>
-      <groupId>androidx.appcompat</groupId>
-      <artifactId>appcompat</artifactId>
-      <version>1.6.1</version>
-      <type>aar</type>
-    </dependency>
-    
-    <!-- AndroidX ConstraintLayout -->
-    <dependency>
-      <groupId>androidx.constraintlayout</groupId>
-      <artifactId>constraintlayout</artifactId>
-      <version>2.1.4</version>
-      <type>aar</type>
-    </dependency>
-    
-    <!-- Material Design -->
-    <dependency>
-      <groupId>com.google.android.material</groupId>
-      <artifactId>material</artifactId>
-      <version>1.9.0</version>
-      <type>aar</type>
-    </dependency>
   </dependencies>
 
   <build>
@@ -95,7 +71,6 @@
             <skip>false</skip>
           </zipalign>
           <apkDebug>true</apkDebug>
-          <apkName>${project.artifactId}-${project.version}</apkName>
         </configuration>
         <extensions>true</extensions>
       </plugin>
